@@ -1,8 +1,4 @@
-# STEP-2 创建项目，规划页面结构、组件拆解；引入路由库 React Router
-
-## 创建项目
-
-使用脚手架 [CRA](https://create-react-app.dev/) 创建 `React` 应用
+# STEP-2 规划页面结构、组件拆分
 
 ## 规划页面结构
 
