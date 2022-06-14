@@ -1,0 +1,50 @@
+.todo-item-wrap {
+  padding: 12px 6px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.opt-btn {
+  visibility: hidden;
+}
+.todo-item-wrap:hover {
+  background: var(--hover-bg-color);
+}
+
+.todo-item-wrap:hover .opt-btn {
+  visibility: visible;
+}
+.todo-item-wrap:first-child {
+  border-top: none;
+}
+.time-completed {
+  padding-left: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.time-deadline {
+  padding-left: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--error-color);
+}
+
+p.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  width: 80px;
+  color: #ff0000;
+}
+
+.semi-checkbox-extra {
+  margin-top: 12px;
+  padding-left: 0;
+}
+

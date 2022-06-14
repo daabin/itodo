@@ -1,0 +1,17 @@
+.add-init {
+  display: flex;
+  align-items: center;
+}
+.add-init:hover {
+  cursor: pointer;
+}
+.opts {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns {
+  display: flex;
+  justify-content: flex-end;
+}

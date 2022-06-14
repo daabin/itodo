@@ -19,6 +19,7 @@ code {
 
 :root {
   --primary-color: #165DFF;
+  --error-color: #ff0000;
   --hover-color: #E8F3FF;
   --text-color: #272E3B;
   --active-bg-color: #E8F3FF;

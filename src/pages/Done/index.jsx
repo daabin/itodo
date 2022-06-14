@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react'
+import PubSub from 'pubsub-js'
+import TodoList from '../../components/TodoList'
 
 function Done() {
+  useEffect(() => {
+    return () => {
+      PubSub.unsubscribe('refresh.todo.list')
+    }
+  }, [])
+
   return (
-    <div>
-      Done
-    </div>
+    <TodoList type={'done'}></TodoList>
   );
 }
 

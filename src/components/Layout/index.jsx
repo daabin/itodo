@@ -20,7 +20,9 @@ function Layout() {
       </nav>
       <div className="content">
         <SubTitle></SubTitle>
-        <Outlet />
+        <div className='container'>
+          <Outlet />
+        </div>
       </div>
     </div>
   )

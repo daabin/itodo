@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# STEP-3 设计数据模型，引入组件库，完成页面搭建
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 设计数据模型
 
-## Available Scripts
+```
+// 任务 scheme 
+{
+  id: number, // 自增 id
+  title: string, // 任务描述
+  completed: bool, // 是否已完成
+  deadline: number, // 任务截止时间 毫秒时间戳
+  completedAt: number, // 完成时间  毫秒时间戳
+}
 
-In the project directory, you can run:
+// 任务列表
+const TodoList = {
+  "data": [
+    {
+      "title": "周六早晨慢跑10KM @张三",
+      "completed": false,
+      "deadline": 1655519703000,
+      "completedAt": null,
+      "id": 6
+    },
+    {
+      "title": "周五晚上到图书馆继续看操作系统概论",
+      "completed": false,
+      "deadline": 1655455116000,
+      "completedAt": null,
+      "id": 7
+    },
+    {
+      "title": "约高中同学到北亭聚一下",
+      "completed": true,
+      "deadline": 1655001363000,
+      "completedAt": 1655174168517,
+      "id": 8
+    }
+  ],
+  "offset": 0,
+  "limit": 10,
+  "total": 5
+}
+```
 
-### `npm start`
+## 引入依赖
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 组件库 `@douyinfe/semi-ui`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 时间处理工具函数 `dayjs`
 
-### `npm test`
+- HTTP 请求库 `axios`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 发布订阅库 `pubsub-js`
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm i @douyinfe/semi-ui dayjs pubsub-js axios
+```
