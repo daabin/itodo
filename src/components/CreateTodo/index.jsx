@@ -29,14 +29,14 @@ function CreateTodo() {
         completed: false,
         deadline: deadlineTs,
         completedAt: null
-      }).then(res => {
+      }).then(() => {
         Toast.success({
           content: '创建成功',
           showClose: false
         })
         reset()
         PubSub.publish('refresh.todo.list')
-      }).catch(err => {
+      }).catch(() => {
         Toast.error({
           content: '创建失败，请重试',
           showClose: false
