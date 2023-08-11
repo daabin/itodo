@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: 'https://rem-daabin.vercel.app/api/tasks',
+  baseURL: 'https://hua-i.daabin.cn/api/tasks',
   timeout: 10000,
   withCredentials: true
 });
